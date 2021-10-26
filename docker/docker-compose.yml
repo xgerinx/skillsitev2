@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+    django-service:
+        build:
+            context: ./django
+            args:
+                USER_UID: ${USER_UID}
+                USER_GID: ${USER_GID}
+
+        env_file:
+        - .env
+        environment:
+            USER_UID: ${USER_UID}
+            USER_GID: ${USER_GID}
+        volumes:
+            - ${PROJECT_SRC}:/code
+        links:
+            - ${DB_SERVICE}:${DB_CONTAINERNAME}
+        depends_on:
+            - ${DB_SERVICE}
+        tty: true
+
+    db-service:
+        image: postgres
+        env_file:
+            - .env
+        restart: 'no' #always
+
+    redis:
+        image: redis:latest
+        ports:
+            - '6379:6379'

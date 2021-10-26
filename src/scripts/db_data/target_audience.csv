@@ -1,0 +1,22 @@
+profession,logo,courses
+Специалисты по продажам,seller.svg,1:2
+"Все, кто ведёт расчёты в Excel",excel_person.svg,1
+Руководители и предприниматели,leader.svg,1:2:5
+Бухгалтеры,accountant.svg,1:2:4
+Аналитики,analyst.svg,1:2:4:7:8
+Менеджеры по продажам,sell_manager.svg,1:2:3:4:7:6:8
+Маркетологи,marketer.svg,1:2:3:4:7:6:8
+Project менеджеры,proj_manager.svg,1:2:5:4:7:6:8
+Логисты,logistician.svg,1
+Экономисты,economist.svg,1:2:4:7:6:8
+HR’ы,hr.svg,1:2
+Администраторы,admin.svg,1
+Банковые служащие,bank_person.svg,1:2:4:7:8
+Копирайтеры,copywriter.svg,2:7:6:8
+SMM,smm.svg,2:4:7:6:8
+PR-менеджеры,pr_manager.svg,3
+Дизайнеры,designer.svg,3
+Бренд-менеджеры,brand_manager.svg,3:5
+Учителя,teachers.svg,3
+Product менеджеры,product_manager.svg,5
+Программисты,programmers.svg,4:7:8

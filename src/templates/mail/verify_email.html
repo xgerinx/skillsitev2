@@ -1,0 +1,6 @@
+{% autoescape off %}
+    Hi {{ user.username }},
+    Welcome to SkillIm
+    Please click on the link below to verify your email,
+    http://{{ domain }}/verify/email/{{token}}
+{% endautoescape %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Log in</h1>
+<form method="POST" id="login_form" action="{% url 'signin' %}">{% csrf_token %}
+    {{ form.as_p }}
+    <button id="login" type="submit" class="save btn btn-default">Login</button>
+</form>
+<a href="/forgot">Forgot</a>
+
+<a class="btn btn-primary"  href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+<a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}">Google</a>
+
+<br><br>
+<div>
+    <button id="test-post" type="submit" class="btn btn-primary">Get list of posts</button>
+</div>
+<br>
+<div id="posts-list"></div>
+<div id="verify-email"></div>
+{% endblock %}
+
+
+{% block script %}
+  <script src="{% static 'js_files/test_signin.js' %}"></script>
+{% endblock script %}

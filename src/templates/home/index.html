@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans 'Home page' %}</h1>
+{{ name }}
+<form method="post" action="/locale/"> {% csrf_token %}
+    <select name="locale">
+        <option value="en">En</option>
+        <option value="ru">Ru</option>
+        <option value="ua">Ua</option>
+    </select>
+<input type="submit" value="submit">
+</form>
+
+{% endblock content %}

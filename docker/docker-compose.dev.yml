@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+    django-service:
+        container_name: ${DJANGO_CONTAINERNAME}
+        ports:
+            - "${HTTP_PORT}:8000"
+
+    db-service:
+        container_name: ${DB_CONTAINERNAME}
+        ports:
+            - '${DB_PORT}:5432'
+
